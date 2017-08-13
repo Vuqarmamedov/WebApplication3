@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.title</title>
+    @RenderSection("CssHere",required:false)
+</head>
+<body>
+    <div>
+        <ul>
+            <li>
+                @Html.ActionLink("Index","Index","Category")
+            </li>
+            <li>
+                @Html.ActionLink("Details", "Details", "Category")
+            </li>
+            <li>
+                @Html.ActionLink("Deyis", "Edit", "Category")
+            </li>
+        </ul>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <div>Copyright CodeAcademy 2017 </div>
+    <footer>
+        @RenderSection("ScriptPlace",required:false)
+    </footer>  
+</body>
+</html>
